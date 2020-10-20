@@ -36,3 +36,27 @@ h1 {
   left: 50%;
   transform: translate(-50%, -50%);
 }
+
+/* Image Container */
+  /* 10px for top and bottom and 30% for left and right */
+.image-container {
+  margin: 10px 30%;
+}
+/* img a child of image container */
+.image-container img {
+  width: 100%;
+  margin-top: 5px;
+
+}
+
+/* Media Query:  Large Smartphone */
+/* 600px means anything less than 600px will apply this styling */
+@media screen and (max-width:  600px) {
+  h1 {
+    font-size: 20px;
+  }
+
+  .image-container {
+    margin: 10px;
+  }
+}
