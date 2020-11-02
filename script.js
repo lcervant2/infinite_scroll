@@ -65,5 +65,20 @@ async function getPhotos() {
     }
 }
 
+// Check to see if scrolling near bottom of pag, Load More Photos
+window.addEventListener('scroll', () => {
+  // We put console.log so that we can have an idea of how often is actually trigger.
+  // Arrow function / create our function within our event listener
+  // Scrool
+  // The window is the parent of the document and the grandparent of the body
+  // That't where our event listerner is attached
+  // Delete-console.log('scrolled');
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight - 1000) {
+    getPhotos();
+    console.log('load more');
+  }
+});
+
+
 // On Load - We are running the fucntion 
 getPhotos();
